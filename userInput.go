@@ -4,9 +4,9 @@ import (
 	"fmt"
 )
 
-func BitsToByte(bits float64) (bytes float64){
-	bytes = bits/8
-	return
+func BitsToByte(bits float64) float64{
+	bytes := bits/8
+	return bytes
 }
 
 func main(){
