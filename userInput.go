@@ -20,7 +20,7 @@ func BitsToMegaByte(bits float64) float64{
 }
 
 func BitsToGigaByte(bits float64) float64{
-	gigaBytes := BitsToMByte(bits)/1024
+	gigaBytes := BitsToMegaByte(bits)/1024
 	return gigaBytes
 }
 
@@ -35,7 +35,15 @@ func main(){
 	fmt.Scan(&sizeInBits)
 
 	var sizeInBytes float64 = BitsToByte(sizeInBits)
+	var sizeInKiloBytes float64 = BitsToKiloByte(sizeInBits)
+	var sizeInMegaBytes float64 = BitsToMegaByte(sizeInBits)
+	var sizeInGigaBytes float64 = BitsToGigaByte(sizeInBits)
+	var sizeInTeraBytes float64 = BitsToTeraByte(sizeInBits)
 
 	fmt.Println("Original Size(bits):", int(sizeInBits), "bits")
 	fmt.Println("Converted Size(bytes):", int(sizeInBytes), "bytes")
+	fmt.Println("Converted Size(kilobytes):", int(sizeInKiloBytes), "kilobytes")
+	fmt.Println("Converted Size(megabytes):", int(sizeInMegaBytes), "megabytes")
+	fmt.Println("Converted Size(gigabytes):", int(sizeInGigaBytes), "gigabytes")
+	fmt.Println("Converted Size(terabytes):", int(sizeInTeraBytes), "terabytes")
 }
